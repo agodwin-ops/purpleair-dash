@@ -1,0 +1,280 @@
+.dashboard-container {
+  max-width: 100vw;
+  margin: 0;
+  padding: 8px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .dashboard-container {
+    padding: 12px;
+  }
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.info-box {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #dbeafe;
+  border-radius: 4px;
+}
+
+.info-text {
+  font-size: 0.875rem;
+  color: #1e40af;
+  margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radio-input {
+  width: 12px;
+  height: 12px;
+  accent-color: #2563eb;
+  flex-shrink: 0;
+}
+
+.radio-label {
+  font-size: 0.75rem;
+  color: #374151;
+  line-height: 1.2;
+}
+
+.chart-section {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .chart-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 8px;
+}
+
+.chart-value {
+  text-align: center;
+}
+
+.chart-value-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-value-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+.chart-note {
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.severity-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.severity-display {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.severity-hours {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.severity-label {
+  font-size: 0.875rem;
+  margin: 4px 0 0 0;
+}
+
+.severity-level {
+  text-align: center;
+}
+
+.severity-level-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.severity-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .severity-legend {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.legend-item {
+  text-align: center;
+}
+
+.legend-color {
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.legend-text {
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+.loading {
+  padding: 32px;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* Color utilities */
+.text-blue-600 { color: #2563eb; }
+.text-green-600 { color: #16a34a; }
+.text-purple-600 { color: #9333ea; }
+
+/* AQI Color Scheme */
+.bg-aqi-good { background-color: #00e400; }
+.bg-aqi-moderate { background-color: #ffff00; }
+.bg-aqi-sensitive { background-color: #ff7e00; }
+.bg-aqi-unhealthy { background-color: #ff0000; }
+.bg-aqi-very-unhealthy { background-color: #8f3f97; }
+.bg-aqi-hazardous { background-color: #7e0023; }
